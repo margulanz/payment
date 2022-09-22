@@ -11,3 +11,7 @@ class Item(models.Model):
 		return self.name
 	def __repr__(self):
 		return self.name
+
+
+class Order(models.Model):
+	item = models.ManyToManyField(Item, related_name = 'item')
