@@ -47,11 +47,13 @@
 			<th>Description</th>
 			<th>Price (in cents)</th>
 		</tr>
+		{% for item in order %}
 		<tr>
-			<td>{{product_name}}</td>
-			<td>{{description}}</td>
-			<td>{{price}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td>{{item.price}}</td>
 		</tr>
+		{% endfor %}
 	</table>
 	<button style="display: block;margin: 0px auto;margin-top: 20px;" 	id = "checkoutButton">Buy!</button>
 	
