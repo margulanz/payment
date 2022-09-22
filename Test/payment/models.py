@@ -15,3 +15,7 @@ class Item(models.Model):
 
 class Order(models.Model):
 	item = models.ManyToManyField(Item, related_name = 'item')
+	def __str__(self):
+		return f"Order #{self.id}"
+	def __repr__(self):
+		return f"Order #{self.id}"
